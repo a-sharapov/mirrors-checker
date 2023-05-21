@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Проверяем работу основного домена и зеркал</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&subset=cyrillic,cyrillic-ext,latin-ext");
+
+      * {
+        font-family: "PT Sans", sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        color: #111;
+        text-shadow: 0 1px 0 #fff;
+        background: #eee;
+        background: radial-gradient(circle, #eee 0%, #aaa 100%);
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+      }
+
+      body * {
+        box-sizing: border-box;
+      }
+
+      main {
+        text-align: center;
+        max-width: 320px;
+        line-height: 1.5em;
+      }
+
+      main svg {
+        filter: drop-shadow(0 0 0.2em rgba(0, 0, 0, 0.2));
+      }
+
+      hr {
+        margin: 1em 0;
+        border: none;
+        border-bottom: 1px dotted #999;
+      }
+
+      main hr + p:last-of-type {
+        font-size: 0.8em;
+      }
+
+      .loader {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: inline-block;
+        border-top: 3px solid #333;
+        border-right: 3px solid transparent;
+        box-sizing: border-box;
+        animation: rotate 0.9s linear infinite;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main id="content-wrapper">
+      <i class="loader"></i>
+    </main>
+  </body>
+
+  <script defer async src="./mirrors.js"></script>
+</html>
